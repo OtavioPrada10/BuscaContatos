@@ -23,7 +23,7 @@ class BuscaContatos:
         senha_input = self.driver.find_element('name', 'session_password')
         senha_input.send_keys("XXXXXXXXXXXX")
         time.sleep(5)
-        
+        senha_input.send_keys(Keys.RETURN)
 
 
 Contato = BuscaContatos()
