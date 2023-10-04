@@ -54,6 +54,7 @@ class BuscaContatos:
         oBarraBuscaGoogle = self.driver.find_element('name', 'q')
         oBarraBuscaGoogle.send_keys(sBusca)
         oBarraBuscaGoogle.send_keys(Keys.RETURN)
+        sleep(3)
         lista_perfil = self.driver.find_elements('xpath','//div[@class="yuRUbf"]/div/span/a')
         lista_perfil = [perfil.get_attribute('href') for perfil in lista_perfil]
         for perfil in lista_perfil:
